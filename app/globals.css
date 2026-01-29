@@ -87,10 +87,13 @@ canvas {
   touch-action: pan-y;
 }
 
-/* 5. OPȚIONAL: EFECT TRANSPARENȚĂ IMAGINI (dacă imaginile au fundal negru) */
-/* Descomentează dacă vrei ca pozele din proiecte să se "amestece" cu fundalul */
-/*
-.project-image-class {
-  mix-blend-mode: screen;
+/* În globals.css */
+@theme {
+  /* Definim animația shimmer direct aici */
+  --animate-shimmer: shimmer 2s infinite;
+
+  @keyframes shimmer {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
 }
-*/
