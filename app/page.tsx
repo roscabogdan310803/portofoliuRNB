@@ -57,13 +57,15 @@ export default function Home() {
 
         {/* SECTIUNEA PROIECTE - Aceasta rămâne FĂRĂ padding lateral pentru efectul de full-width */}
         <section 
-          id="proiecte" 
-          className="relative h-screen min-h-[600px] w-full bg-[#0a0a0a] flex items-center justify-center overflow-hidden"
-        >
-          <div className="w-full h-full relative z-30">
-            <InfiniteMenu items={projects} scale={1.5} />
-          </div>
-        </section>
+  id="proiecte" 
+  /* Am scos overflow-hidden de aici și am pus bg-transparent pentru a fi sigur */
+  className="relative h-screen min-h-[600px] w-full bg-[#0a0a0a] flex items-center justify-center pointer-events-auto"
+>
+  {/* Mutăm overflow-hidden pe acest div interior care conține DOAR meniul */}
+  <div className="w-full h-full relative z-30 overflow-hidden pointer-events-auto">
+    <InfiniteMenu items={projects} scale={1.5} />
+  </div>
+</section>
 
         {/* SECTIUNE DESPRE - Padding generos pentru text */}
         <section 
