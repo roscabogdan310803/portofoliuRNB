@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ededed;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* 1. RESET COMPLET & FIX DUNGĂ LATERALĂ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  /* Rezervă spațiul barei de scroll pentru a preveni 'săritura' layout-ului 
+     și dunga transparentă din dreapta */
+  scrollbar-gutter: stable;
+  background-color: #000000;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+html, body {
+  /* SCOATE orice overflow: hidden de aici! */
+  overflow-x: hidden;
+  overflow-y: auto !important; 
+  height: auto;
+  min-height: 100%;
 }
 
 body {
-  background: var(--background);
+  background-color: #000000;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* Elimină scroll-ul orizontal accidental */
+  overflow-y: auto;   /* Permite scroll-ul vertical normal */
+  /* Fix pentru mobil: previne refresh-ul accidental la pull-down pe sectiuni fixe */
+  overscroll-behavior-y: none;
 }
+
+/* 2. ANIMAȚIE GRADIENT PENTRU NUME (Bogdan) */
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 5s ease infinite;
+}
+
+/* 3. STILIZARE SCROLLBAR (Modern & Dark) */
+/* Webkit (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  /* Fundalul barei trebuie să fie negru mat pentru a ascunde fundalul fix */
+  background: #000000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #10b981; /* Culoarea emerald-400 */
+  border-radius: 0px;  /* Pătrat pentru a nu lăsa goluri pe margini */
+  border: 2px solid #000000;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 #000000;
+}
+
+/* 4. FIX PENTRU MOBIL & INTERACȚIUNE PROIECTE */
+/* Permite scroll-ul paginii chiar dacă degetul este pe zona cu Canvas (proiecte) */
+canvas {
+  touch-action: pan-y !important;
+}
+
+#proiecte {
+  /* Ne asigurăm că secțiunea de proiecte nu blochează gesturile browserului */
+  touch-action: pan-y;
+}
+
+/* 5. OPȚIONAL: EFECT TRANSPARENȚĂ IMAGINI (dacă imaginile au fundal negru) */
+/* Descomentează dacă vrei ca pozele din proiecte să se "amestece" cu fundalul */
+/*
+.project-image-class {
+  mix-blend-mode: screen;
+}
+*/
