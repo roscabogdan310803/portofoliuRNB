@@ -97,3 +97,26 @@ canvas {
     to { transform: translateX(100%); }
   }
 }
+
+/* SHINY BUTTON GLOBAL SIZE */
+.shiny-btn {
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .shiny-btn {
+    padding: 1rem 1rem;
+  }
+}
+
+
+.shiny-gradient {
+  transform: translateX(-100%);
+  transition: transform 0.7s ease;
+}
+
+.group:hover .shiny-gradient {
+  transform: translateX(0%);
+}
+
