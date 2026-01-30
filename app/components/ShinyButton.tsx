@@ -7,14 +7,14 @@ export default function ShinyButton({ text, link }: { text: string; link: string
       target="_blank"
       rel="noopener noreferrer"
       className="
-        shiny-btn
-        group relative inline-flex
-        font-bold uppercase tracking-widest
-        text-sm md:text-base
-        rounded-2xl overflow-hidden
-        border border-white/10
-        transition-all duration-500
-      "
+      shiny-btn
+      group relative inline-flex
+      font-bold uppercase tracking-widest
+      text-sm md:text-base
+      rounded-2xl overflow-hidden
+      border-2 border-emerald-400/70
+      transition-all duration-500
+    "
     >
       {/* GRADIENT SLIDE */}
       <span
@@ -29,7 +29,6 @@ export default function ShinyButton({ text, link }: { text: string; link: string
       <span
         className="
           absolute inset-0
-          bg-white/5
         "
       ></span>
 

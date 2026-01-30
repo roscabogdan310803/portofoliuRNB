@@ -10,10 +10,11 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   const projects = [
-    { image: "./shoop.png", link: "#", title: "sHoop", description: "Descriere" },
-    { image: "./sHoopV2.png", link: "#", title: "sHoopV2", description: "Descriere" },
     { image: "./tracker.png", link: "https://financetracker-iota.vercel.app/", title: "Finance Tracker", description: "Descriere" },
-    { image: "./ai-generator.png", link: "#", title: "Image Generator", description: "Descriere" },
+    { image: "./ai-generator.png", link: "https://ai-gen-rb.netlify.app/", title: "Image Generator", description: "Descriere" },
+    { image: "./shoop.png", link: "https://roscabogdan310803.github.io/shoop/", title: "sHoop", description: "Descriere" },
+    { image: "./sHoopV2.png", link: "https://s-hoop-v2.vercel.app/", title: "sHoopV2", description: "Descriere" },
+    { image: "./limo.png", link: "https://carrent-blue.vercel.app/", title: "Limo Rent", description: "Descriere" },
   ];
 
   useEffect(() => {
@@ -60,7 +61,7 @@ export default function Home() {
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/pozica.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/20 backdrop-blur-xs"></div>
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-s"></div>
       </div>
 
       <main className="relative z-10">
@@ -82,7 +83,7 @@ export default function Home() {
               </h1>
 
               {/* BUTOANE ORIZONTALE */}
-              <div className="flex flex-row flex-wrap justify-center  md:justify-evenly mt-2 md:mt-5">
+              <div className="flex flex-row flex-wrap justify-evenly  md:justify-left mt-2 md:mt-5">
                 <ShinyButton text="CV-ul meu" link="/cv.pdf" />
                 <ShinyButton text="Github" link="https://github.com/roscabogdan310803" />
               </div>
@@ -99,10 +100,9 @@ export default function Home() {
                   </span>
 
                   <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-                    Mi-am început parcursul în lumea dezvoltării web.  
-                    Experimentez constant și construiesc proiecte care combină
-                    designul modern cu funcționalitatea.
-                  </p>
+                    Sunt un web developer autodidact, iar această pasiune a început în anul doi de facultate, mai mult din curiozitate și dorința de a face ceva diferit.</p>
+                   <p className="mt-4 text-lg text-gray-300 leading-relaxed"></p>
+                    Mi-am început parcursul cu bazele HTML și CSS, unde m-a captivat ideea că pot construi ceva de la zero. Apoi am descoperit JavaScript și modul în care un site poate deveni interactiv, lucru care m-a fascinat și mai mult. Toate aceste experiențe m-au făcut să fiu tot mai curios și m-au determinat să urmez serios drumul dezvoltării web dorind sa devin un Full Stack Developer.
                 </div>
               </div>
             </div>

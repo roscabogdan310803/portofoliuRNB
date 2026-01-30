@@ -39,7 +39,7 @@ export default function Navbar() {
             <li key={link.name} className="relative group">
               <button
                 onClick={() => handleScroll(link.id)}
-                className="opacity-50 group-hover:opacity-100 transition-all duration-300"
+                className="opacity-70 group-hover:opacity-100 transition-all duration-300"
               >
                 {link.name}
               </button>
