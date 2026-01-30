@@ -6,11 +6,6 @@
 }
 
 /* 1. RESET COMPLET & FIX DUNGĂ LATERALĂ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 html {
   scrollbar-gutter: stable;
@@ -100,13 +95,15 @@ canvas {
 
 /* SHINY BUTTON GLOBAL SIZE */
 .shiny-btn {
-  padding: 1.2rem 3rem;
-  border-radius: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  margin: 5px;
 }
 
 @media (min-width: 768px) {
   .shiny-btn {
     padding: 1rem 1rem;
+    
   }
 }
 
@@ -118,5 +115,9 @@ canvas {
 
 .group:hover .shiny-gradient {
   transform: translateX(0%);
+}
+
+.card-padding {
+  padding: 4rem !important; /* echivalent p-16 */
 }
 
