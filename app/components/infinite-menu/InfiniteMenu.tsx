@@ -1120,6 +1120,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
         <>
           <h2
   className={`
+    bg-gradient-to-r from-emerald-400 via-green-400 to-teal-300 bg-clip-text text-transparent animate-gradient
     select-none
     absolute
     font-black
@@ -1143,15 +1144,15 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
   className={`
     select-none
     absolute
-    max-w-[260px] md:max-w-[220px]    
-    text-[1rem] md:text-[1.1rem]       
-    px-4 py-2
+    max-w-[90%] md:max-w-[400px]        /* lățime mai mare pe mobil și desktop */
+    text-[1rem] md:text-[1.3rem]        /* dimensiune text responsive */
+    px-6 py-4                            /* padding mai mare pentru spațiu */
     bg-black/60
     rounded-xl
-    left-1/2 md:right-[2.5rem] md:left-auto 
-    bottom-70 md:top-115                  
+    left-1/2 md:right-[2.5rem] md:left-auto  /* mobil centrat, desktop dreapta */
+    bottom-35 md:top-120              /* mobil puțin mai jos, desktop centrat vertical */
     transform -translate-x-1/2 -translate-y-0 md:-translate-y-1/2 md:translate-x-0
-    text-center md:text-right
+    text-leading-relaxed
     transition-all
     ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
     ${isMoving ? 'opacity-0 pointer-events-none duration-[100ms] translate-y-[10%]' : 'opacity-100 pointer-events-auto duration-[500ms]'}
@@ -1159,7 +1160,6 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
 >
   {activeItem.description}
 </p>
-
           <div
             onClick={handleButtonClick}
             className={`

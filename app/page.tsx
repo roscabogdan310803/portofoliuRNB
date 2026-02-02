@@ -10,11 +10,11 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   const projects = [
-    { image: "./tracker.png", link: "https://financetracker-iota.vercel.app/", title: "Finance Tracker", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
-    { image: "./ai-generator.png", link: "https://ai-gen-rb.netlify.app/", title: "Image Generator", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
-    { image: "./shoop.png", link: "https://roscabogdan310803.github.io/shoop/", title: "sHoop", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
-    { image: "./sHoopV2.png", link: "https://s-hoop-v2.vercel.app/", title: "sHoopV2", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
-    { image: "./limo.png", link: "https://carrent-blue.vercel.app/", title: "Limo Rent", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
+    { image: "./tracker.png", link: "https://financetracker-iota.vercel.app/", title: "Finance Tracker", description: "Am creat un tracker financiar full-stack cu MERN, cu autentificare Clerk, backend Node.js/Express/MongoDB și deploy complet, învățând gestionarea datelor și integrarea aplicației." },
+    { image: "./ai-generator.png", link: "https://ai-gen-rb.netlify.app/", title: "Image Generator", description: "Am realizat un generator de imagini AI cu JavaScript și API-uri, învățând să gestionez cereri async și răspunsuri API, ceea ce mi-a îmbunătățit mult abilitățile de web development." },
+    { image: "./shoop.png", link: "https://roscabogdan310803.github.io/shoop/", title: "sHoop", description: "În acest proiect am vrut doar să văd cum stau la capitolul design și dacă site-ul arată bine pe mobil. Am mers puțin la întâmplare, mi-am lăsat imaginația liberă și am improvizat pagina." },
+    { image: "./sHoopV2.png", link: "https://s-hoop-v2.vercel.app/", title: "sHoopV2", description: "Am realizat un site dinamic în Next.js, cu mai multe pagini, folosind Sanity pentru actualizări în timp real ale produselor și Stripe pentru plăți online. Am adăugat și animații GSAP pentru un plus de interactivitate și stil." },
+    { image: "./limo.png", link: "https://carrent-blue.vercel.app/", title: "Limo Rent", description: "Asta a fost primul meu proiect de frontend ca freelancer unde am avut o cazia de a invata cum trebuie desfasurat un proiect real" },
   ];
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export default function Home() {
         {/* HERO */}
         <section
           id="home"
-          className="min-h-screen flex items-center justify-center px-6"
+          className="min-h-screen flex items-center justify-center px-6 pt-14"
         >
           <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -111,15 +111,19 @@ export default function Home() {
         </section>
 
         {/* PROIECTE */}
-        <section
-          id="proiecte"
-          className="h-screen bg-[#0a0a0a] flex items-center justify-center"
-        >
-          <div className="w-full h-full">
-            <InfiniteMenu items={projects} scale={1.5} />
-          </div>
-        </section>
+<section
+  id="proiecte"
+  className="h-screen bg-[#0a0a0a] relative"
+>
+  {/* Titlu suprapus deasupra meniului */}
+  <h1 className="absolute top-20 w-full text-center text-white text-4xl md:text-5xl font-bold z-10 pointer-events-none ">
+    Proiectele mele
+  </h1>
 
+  <div className="w-full h-full relative z-0">
+    <InfiniteMenu items={projects} scale={1.5} />
+  </div>
+</section>
         {/* SKILLS */}
        <section
   id="skills"
