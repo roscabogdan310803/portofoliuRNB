@@ -14,7 +14,7 @@ export default function Home() {
   image: "./tracker.png", 
   link: "https://financetracker-one-green.vercel.app/", 
   title: "Finance Tracker", 
-  description: "Un tracker financiar full-stack realizat cu MERN, care ajută utilizatorii să își gestioneze veniturile și cheltuielile. Am integrat autentificare securizată cu Clerk și am construit backend-ul cu Node.js, Express și MongoDB, învățând să gestionez eficient datele. Deploy-ul complet m-a ajutat să înțeleg mai bine integrarea dintre frontend și backend." 
+  description: "Un tracker financiar full-stack realizat cu MERN, care permite gestionarea veniturilor și cheltuielilor. Include autentificare securizată cu Clerk, backend în Node.js, Express și MongoDB, și un deploy complet ce evidențiază integrarea frontend–backend." 
 },
 { 
   image: "./ai-generator.png", 
