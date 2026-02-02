@@ -84,7 +84,7 @@ export default function Home() {
 
               {/* BUTOANE ORIZONTALE */}
               <div className="flex flex-row flex-wrap justify-evenly  md:justify-left mt-2 md:mt-5">
-                <ShinyButton text="CV-ul meu" link="/cv.pdf" />
+                <ShinyButton text="CV-ul meu" link="/CV.pdf" />
                 <ShinyButton text="Github" link="https://github.com/roscabogdan310803" />
               </div>
             </div>
