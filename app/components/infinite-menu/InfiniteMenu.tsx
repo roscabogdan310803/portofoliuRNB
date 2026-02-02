@@ -1145,9 +1145,10 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
     select-none
     absolute
     max-w-[90%] md:max-w-[400px]        /* lățime mai mare pe mobil și desktop */
-    text-[1rem] md:text-[1.3rem]        /* dimensiune text responsive */
+    text-[0.7rem] md:text-[1.3rem]        /* dimensiune text responsive */
     px-6 py-4                            /* padding mai mare pentru spațiu */
-    bg-black/60
+    bg-emerald-400/60                    /* fundal semi-transparent */
+    text-white
     rounded-xl
     left-1/2 md:right-[2.5rem] md:left-auto  /* mobil centrat, desktop dreapta */
     bottom-35 md:top-120              /* mobil puțin mai jos, desktop centrat vertical */

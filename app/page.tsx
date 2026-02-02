@@ -10,11 +10,36 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   const projects = [
-    { image: "./tracker.png", link: "https://financetracker-iota.vercel.app/", title: "Finance Tracker", description: "Am creat un tracker financiar full-stack cu MERN, cu autentificare Clerk, backend Node.js/Express/MongoDB și deploy complet, învățând gestionarea datelor și integrarea aplicației." },
-    { image: "./ai-generator.png", link: "https://ai-gen-rb.netlify.app/", title: "Image Generator", description: "Am realizat un generator de imagini AI cu JavaScript și API-uri, învățând să gestionez cereri async și răspunsuri API, ceea ce mi-a îmbunătățit mult abilitățile de web development." },
-    { image: "./shoop.png", link: "https://roscabogdan310803.github.io/shoop/", title: "sHoop", description: "În acest proiect am vrut doar să văd cum stau la capitolul design și dacă site-ul arată bine pe mobil. Am mers puțin la întâmplare, mi-am lăsat imaginația liberă și am improvizat pagina." },
-    { image: "./sHoopV2.png", link: "https://s-hoop-v2.vercel.app/", title: "sHoopV2", description: "Am realizat un site dinamic în Next.js, cu mai multe pagini, folosind Sanity pentru actualizări în timp real ale produselor și Stripe pentru plăți online. Am adăugat și animații GSAP pentru un plus de interactivitate și stil." },
-    { image: "./limo.png", link: "https://carrent-blue.vercel.app/", title: "Limo Rent", description: "Asta a fost primul meu proiect de frontend ca freelancer unde am avut o cazia de a invata cum trebuie desfasurat un proiect real" },
+    { 
+  image: "./tracker.png", 
+  link: "https://financetracker-iota.vercel.app/", 
+  title: "Finance Tracker", 
+  description: "Un tracker financiar full-stack realizat cu MERN, care ajută utilizatorii să își gestioneze veniturile și cheltuielile. Am integrat autentificare securizată cu Clerk și am construit backend-ul cu Node.js, Express și MongoDB, învățând să gestionez eficient datele. Deploy-ul complet m-a ajutat să înțeleg mai bine integrarea dintre frontend și backend." 
+},
+{ 
+  image: "./ai-generator.png", 
+  link: "https://ai-gen-rb.netlify.app/", 
+  title: "Image Generator", 
+  description: "Un generator de imagini AI construit cu JavaScript și API-uri, care permite utilizatorilor să creeze imagini prin inteligență artificială. Am învățat să gestionez cereri async și răspunsuri API, dar generarea momentan nu funcționează deoarece nu sunt credite disponibile." 
+},
+{ 
+  image: "./shoop.png", 
+  link: "https://roscabogdan310803.github.io/shoop/", 
+  title: "sHoop", 
+  description: "Un proiect de design experimental în care am explorat cât de bine se potrivesc ideile mele pe mobil. Am lăsat imaginația liberă și am improvizat pagina, testând culori, layout și interactivitate pentru a vedea cum arată un site complet personalizat." 
+},
+{ 
+  image: "./sHoopV2.png", 
+  link: "https://s-hoop-v2.vercel.app/", 
+  title: "sHoopV2", 
+  description: "Un site dinamic creat în Next.js, cu mai multe pagini, unde produsele se actualizează automat prin Sanity și plățile se fac prin Stripe. Am adăugat animații GSAP pentru a face interacțiunea mai atractivă și pentru a oferi o experiență completă, aproape ca într-un magazin real." 
+},
+{ 
+  image: "./limo.png", 
+  link: "https://carrent-blue.vercel.app/", 
+  title: "Limo Rent", 
+  description: "Primul meu proiect de frontend ca freelancer, unde am învățat cum să gestionez un proiect real de la brief până la implementare. Am lucrat la layout, interactivitate și structură, acumulând experiență valoroasă în dezvoltarea profesională și comunicarea cu clienții." 
+}
   ];
 
   useEffect(() => {
