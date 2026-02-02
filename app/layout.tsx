@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google"; // 1. Importă fontul
 import "./globals.css";
 import Navbar from "./components/Navbar"; // 2. Asigură-te că ai creat acest fișier
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // 3. Configurează instanța fontului
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +22,9 @@ export default function RootLayout({
       {/* 4. Folosește inter.className aici */}
       <body className={`${inter.className} bg-black text-white min-h-screen antialiased`}>
         <Navbar />
-        <main>{children}</main>
+        <main>{children}
+          <SpeedInsights />
+        </main>
       </body>
     </html>
   );
