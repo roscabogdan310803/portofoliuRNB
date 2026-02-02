@@ -121,3 +121,59 @@ canvas {
   padding: 4rem !important; /* echivalent p-16 */
 }
 
+/* ============ PROJECT MENU TEXT ============ */
+
+.menu-title,
+.menu-desc {
+  position: absolute;
+  background: rgba(20, 20, 20, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  border-radius: 14px;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+/* ---------- TITLE ---------- */
+.menu-title {
+  font-weight: 900;
+  font-size: 1.6rem;
+  top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* ---------- DESCRIPTION ---------- */
+.menu-desc {
+  font-size: 0.95rem;
+  max-width: 260px;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* ============ DESKTOP ============ */
+@media (min-width: 768px) {
+
+  .menu-title {
+    font-size: 3rem;
+    top: 50%;
+    left: 2.5rem;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
+  .menu-desc {
+    font-size: 1.1rem;
+    top: 50%;
+    right: 2.5rem;
+    left: auto;
+    transform: translateY(-50%);
+    text-align: right;
+    max-width: 220px;
+  }
+
+}
+

@@ -10,11 +10,11 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   const projects = [
-    { image: "./tracker.png", link: "https://financetracker-iota.vercel.app/", title: "Finance Tracker", description: "Descriere" },
-    { image: "./ai-generator.png", link: "https://ai-gen-rb.netlify.app/", title: "Image Generator", description: "Descriere" },
-    { image: "./shoop.png", link: "https://roscabogdan310803.github.io/shoop/", title: "sHoop", description: "Descriere" },
-    { image: "./sHoopV2.png", link: "https://s-hoop-v2.vercel.app/", title: "sHoopV2", description: "Descriere" },
-    { image: "./limo.png", link: "https://carrent-blue.vercel.app/", title: "Limo Rent", description: "Descriere" },
+    { image: "./tracker.png", link: "https://financetracker-iota.vercel.app/", title: "Finance Tracker", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
+    { image: "./ai-generator.png", link: "https://ai-gen-rb.netlify.app/", title: "Image Generator", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
+    { image: "./shoop.png", link: "https://roscabogdan310803.github.io/shoop/", title: "sHoop", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
+    { image: "./sHoopV2.png", link: "https://s-hoop-v2.vercel.app/", title: "sHoopV2", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
+    { image: "./limo.png", link: "https://carrent-blue.vercel.app/", title: "Limo Rent", description: "ewrfgh89rfg7iefggh7u9rfgguirf" },
   ];
 
   useEffect(() => {
@@ -121,20 +121,150 @@ export default function Home() {
         </section>
 
         {/* SKILLS */}
-        <section
-          id="skills"
-          className="min-h-screen flex items-center justify-center px-6"
-        >
-          <h2 className="text-4xl font-bold">Skills Section</h2>
-        </section>
+       <section
+  id="skills"
+  className="min-h-screen flex items-center justify-center px-6 py-20"
+>
+  <div className="max-w-6xl w-full flex flex-col items-center text-center gap-12">
+
+    {/* TITLU */}
+    <h2 className="text-4xl md:text-5xl font-bold">
+      Abilități
+    </h2>
+
+    {/* DESCRIERE */}
+    <p className="max-w-3xl text-lg md:text-xl opacity-80">
+      De-a lungul parcursului meu am învățat din mai multe surse, precum
+      FreeCodeCamp, YouTube, GitHub și câteva cărți, cum ar fi
+      „JavaScript & JQuery” de Jon Duckett.
+    </p>
+
+    {/* GRID SKILLS */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+
+      {/* HTML */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">HTML</h3>
+        <p className="opacity-80">
+          HTML mi s-a părut confuz în liceu și nici nu mă gândeam la programare pe atunci.
+          Dar datorită FreeCodeCamp am învățat bazele și am obținut chiar și un certificat în HTML.
+        </p>
+      </div>
+
+      {/* CSS */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">CSS</h3>
+        <p className="opacity-80">
+          La început nu știam absolut nimic despre CSS, dar acum chiar îmi place!
+          L-am învățat de pe FreeCodeCamp și YouTube pentru a crea site-uri interesante.
+        </p>
+      </div>
+
+      {/* JavaScript */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">JavaScript</h3>
+        <p className="opacity-80">
+          JavaScript a fost greu la început, dar l-am folosit pentru funcționalități interactive
+          și lucrul cu API-uri.
+        </p>
+      </div>
+
+      {/* React */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">React</h3>
+        <p className="opacity-80">
+          React a fost primul meu contact cu librăriile. M-a învățat cum să structurez aplicații
+          și să gândesc pe componente.
+        </p>
+      </div>
+
+      {/* TypeScript */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">TypeScript</h3>
+        <p className="opacity-80">
+          Cel mai nou interes al meu în programare. Îmbunătățește JavaScript prin tipizare strictă.
+        </p>
+      </div>
+
+      {/* Tailwind */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">TailwindCSS</h3>
+        <p className="opacity-80">
+          Framework-ul meu preferat pentru stilizare rapidă și design modern.
+        </p>
+      </div>
+
+      {/* GSAP */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">GSAP</h3>
+        <p className="opacity-80">
+          Librăria mea pentru animații care aduc site-urile la viață.
+        </p>
+      </div>
+
+      {/* Next.js */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">Next.js</h3>
+        <p className="opacity-80">
+          Următorul nivel după React, cu performanță și SEO mai bun.
+        </p>
+      </div>
+
+      {/* Git */}
+      <div className="p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:scale-105 transition">
+        <h3 className="text-2xl font-semibold mb-3">Git</h3>
+        <p className="opacity-80">
+          Controlul versiunilor și siguranța proiectelor mele.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
         {/* CONTACT */}
-        <section
-          id="contact"
-          className="min-h-screen flex items-center justify-center px-6"
-        >
-          <h2 className="text-4xl font-bold">Contact Section</h2>
-        </section>
+  <section
+  id="contact"
+  className="min-h-screen flex items-center justify-center px-6"
+>
+  <div className="flex flex-col items-center gap-10 text-center">
+    
+    <h2 className="text-4xl md:text-5xl font-bold">
+      Contact
+    </h2>
+
+    <div className="flex flex-col gap-2">
+      <h3 className="text-2xl md:text-3xl font-semibold">
+        Email
+      </h3>
+      <p className="text-lg md:text-xl opacity-80">
+        rnbrosca2003@gmail.com
+      </p>
+    </div>
+
+    <div className="flex flex-col gap-2">
+      <h3 className="text-2xl md:text-3xl font-semibold">
+        Telefon
+      </h3>
+      <p className="text-lg md:text-xl opacity-80">
+        0745 123 456
+      </p>
+    </div>
+
+    <div className="flex flex-col gap-2">
+      <h3 className="text-2xl md:text-3xl font-semibold">
+        Instagram
+      </h3>
+      <p className="text-lg md:text-xl opacity-80">
+        @bogdanneee
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       </main>
     </div>

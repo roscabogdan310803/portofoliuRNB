@@ -1119,47 +1119,46 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
       {activeItem && (
         <>
           <h2
-            className={`
-          select-none
-          absolute
-          font-black
-          [font-size:4rem]
-          left-[1.6em]
-          top-1/2
-          transform
-          translate-x-[20%]
-          -translate-y-1/2
-          transition-all
-          ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-          ${
-            isMoving
-              ? 'opacity-0 pointer-events-none duration-[100ms]'
-              : 'opacity-100 pointer-events-auto duration-[500ms]'
-          }
-        `}
-          >
-            {activeItem.title}
-          </h2>
+  className={`
+    select-none
+    absolute
+    font-black
+    text-[1.8rem] md:text-[3rem]   
+    px-4 py-2                   
+    bg-black/60                   
+    rounded-xl                    
+    left-1/2 md:left-[2.5rem]     
+    top-60 md:top-110        
+    transform -translate-x-1/2 md:-translate-y-1/2 md:translate-x-0
+    text-center md:text-left     
+    transition-all
+    ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+    ${isMoving ? 'opacity-0 pointer-events-none duration-[100ms]' : 'opacity-100 pointer-events-auto duration-[500ms]'}
+  `}
+>
+  {activeItem.title}
+</h2>
 
           <p
-            className={`
-          select-none
-          absolute
-          max-w-[10ch]
-          text-[1.5rem]
-          top-1/2
-          right-[1%]
-          transition-all
-          ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-          ${
-            isMoving
-              ? 'opacity-0 pointer-events-none duration-[100ms] translate-x-[-60%] -translate-y-1/2'
-              : 'opacity-100 pointer-events-auto duration-[500ms] translate-x-[-90%] -translate-y-1/2'
-          }
-        `}
-          >
-            {activeItem.description}
-          </p>
+  className={`
+    select-none
+    absolute
+    max-w-[260px] md:max-w-[220px]    
+    text-[1rem] md:text-[1.1rem]       
+    px-4 py-2
+    bg-black/60
+    rounded-xl
+    left-1/2 md:right-[2.5rem] md:left-auto 
+    bottom-70 md:top-115                  
+    transform -translate-x-1/2 -translate-y-0 md:-translate-y-1/2 md:translate-x-0
+    text-center md:text-right
+    transition-all
+    ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
+    ${isMoving ? 'opacity-0 pointer-events-none duration-[100ms] translate-y-[10%]' : 'opacity-100 pointer-events-auto duration-[500ms]'}
+  `}
+>
+  {activeItem.description}
+</p>
 
           <div
             onClick={handleButtonClick}
